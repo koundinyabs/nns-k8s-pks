@@ -28,7 +28,7 @@ Lets create our very first container application in the cluster. To do this we'l
  $ kubectl get pod ubuntu -o wide 
  NAME READY STATUS RESTARTS AGE IP NODE 
  ubuntu 1/1 Running 0 9m 10.200.24.3 vm-623978bf-6ccc-412e-5673-ee7fc5d3d4a1
- 
+
  $ kubectl describe pod ubuntu
  Name:         ubuntu
  Namespace:    default
@@ -78,4 +78,4 @@ Lets create our very first container application in the cluster. To do this we'l
    Normal  Started                10m   kubelet, vm-623978bf-6ccc-412e-5673-ee7fc5d3d4a1  Started container
 ```
 
-1. 
+1. Exit from the pod's shell by runnung `exit` command.
