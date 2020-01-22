@@ -23,7 +23,7 @@ This exercise builds upon the [Kubernetes Declarative Configuration](k8s-pod-dec
 
 
 ## Create a Service Resource for Routing Traffic to the Deployment 
-1. Within the same yml file, create a loadBalancer service for the deployment like what we did in the previous lab. The completed configuration for the API objects should appear as [this](fortune-deploy.yml). Make sure updating the value of environment variable `REDIS_HOST` with *your namespace* before applying changes.
+1. Within the same yml file, we create a loadBalancer service for the deployment like  we did in the previous lab. The completed configuration for the API objects should appear as [this](fortune-deploy.yml). Make sure updating the value of environment variable `REDIS_HOST` with *your namespace* before applying changes.
 
 2. Deploy the API objects to your Kubernetes cluster using the kubectl _create_ command, using the declarative configuration you just created:
 ```shell
