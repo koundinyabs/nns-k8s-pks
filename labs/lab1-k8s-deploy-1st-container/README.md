@@ -11,7 +11,7 @@ Lets create our very first container application in the cluster. To do this we'l
  root@ubuntu:/#
 ```
 
-1. We've obtained an interactive shell into our container. Feel free to poke around this Ubuntu container. You can see it is started with minimal process by retrieving a process list:
+2. We've obtained an interactive shell into our container. Feel free to poke around this Ubuntu container. You can see it is started with minimal process by retrieving a process list:
 ```
  root@ubuntu:/# echo "My First Container"
  My First Container
@@ -21,7 +21,7 @@ Lets create our very first container application in the cluster. To do this we'l
  root        10  0.0  0.0  34424  2820 ?        R<+  21:07   0:00 ps aux
 ```
 
-1. You can use the kubectl CLI to retrieve details about the running pod. Open a new command window and use the get and details commands to view varying levels of details about your deployed pod: 
+3. You can use the kubectl CLI to retrieve details about the running pod. Open a new command window and use the get and details commands to view varying levels of details about your deployed pod: 
 
 ```
 
@@ -78,4 +78,4 @@ Lets create our very first container application in the cluster. To do this we'l
    Normal  Started                10m   kubelet, vm-623978bf-6ccc-412e-5673-ee7fc5d3d4a1  Started container
 ```
 
-1. Exit from the pod's shell by runnung `exit` command.
+4. Exit from the pod's shell by runnung `exit` command.
