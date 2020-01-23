@@ -1,5 +1,5 @@
 # Change Fortune Application to a Kubernetes Deployment
-This exercise builds upon the [Kubernetes Declarative Configuration](k8s-pod-declarative.en.md) exercise. We will pull the fortune teller frontend and backend apps out and deploy them as a separate `Kubernetes Deployment` while still connecting to the Redis we deployed in [Fortune Pod](fortune-pod.yml)
+This exercise builds upon the [Kubernetes Declarative Configuration](../lab2-k8s-declarative/README.md) exercise. We will pull the fortune teller frontend and backend apps out and deploy them as a separate `Kubernetes Deployment` while still connecting to the Redis we deployed in [Fortune Pod](../lab2-k8s-declarative/fortune-pod.yml)
 
 1. Download the YAML file [here](fortune-deploy.yml) and examine its contents in a text editor or IDE like VS Code. This file will be used to deploy the fortune apps as a _Deployment_, a Kubernetes primitive for highly available and scalable applications. As before, the definition begins with the api version, kind, and basic metadata.
 
@@ -60,7 +60,7 @@ $ kubectl scale deployment.apps/fortune-deploy --replicas=5
 deployment.apps/fortune-deploy scaled
 ```
 ## Update and rollout the deployment
-1. Update the deployment definition within `fortune-deploy.yml` with an addition to the container spec adding a resource request and limit section.  We'll request 1GB of memory and .5 cpu and limit our container so as to not use more than 2GBs of memory and 1 cpu.  As with the env var, make sure this value is part of the first element in the *containers* array in the data structure:
+  1. Update the deployment definition within `fortune-deploy.yml` with an addition to the container spec adding a resource request and limit section.  We'll request 1GB of memory and .5 cpu and limit our container so as to not use more than 2GBs of memory and 1 cpu.  As with the env var, make sure this value is part of the first element in the *containers* array in the data structure:
 ```yaml
 resources:
   requests:
